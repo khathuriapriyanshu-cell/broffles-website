@@ -261,7 +261,7 @@ function renderGallery() {
   if (!container || !window.BrofflesGalleryData) return;
 
   const html = window.BrofflesGalleryData.map((item, index) => {
-    const src = ImageResolver.photosDir + item.filename;
+    const src = ImageResolver.photosDir + encodeURI(item.filename);
     return `
       <div class="gallery-item" data-index="${index}">
         <img 
@@ -398,7 +398,7 @@ function initSpecialtySwappers() {
         img.style.transform = 'scale(0.97)';
         
         setTimeout(() => {
-          img.src = photoSrc;
+          img.src = encodeURI(photoSrc);
           const itemName = row.querySelector('.feature-item-name')?.textContent || 'Broffles Specialty';
           img.alt = itemName;
           img.style.opacity = '1';
