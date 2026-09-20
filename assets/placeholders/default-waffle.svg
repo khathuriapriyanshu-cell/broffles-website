@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF8EE"/>
+      <stop offset="100%" stop-color="#F2E3CD"/>
+    </linearGradient>
+    <radialGradient id="waffleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDE8CB"/>
+      <stop offset="100%" stop-color="#E1B478"/>
+    </radialGradient>
+    <linearGradient id="chocoDrip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4A2614"/>
+      <stop offset="100%" stop-color="#281308"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#552B11" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle waffle grid in background -->
+  <g opacity="0.1" stroke="#8C5123" stroke-width="1.5">
+    <path d="M0,50 H400 M0,100 H400 M0,150 H400 M0,200 H400 M0,250 H400"/>
+    <path d="M50,0 V300 M100,0 V300 M150,0 V300 M200,0 V300 M250,0 V300 M300,0 V300 M350,0 V300"/>
+  </g>
+
+  <!-- Ambient Plate / Serving Board Shadow -->
+  <ellipse cx="200" cy="225" rx="140" ry="24" fill="#6A3616" opacity="0.14" filter="blur(8px)"/>
+
+  <!-- Crispy Waffle Triangle / Quarter -->
+  <g filter="url(#softShadow)">
+    <path d="M120,80 L280,80 Q300,160 200,240 Q100,160 120,80 Z" fill="url(#waffleGlow)" stroke="#9F652B" stroke-width="3.5" stroke-linejoin="round"/>
+    
+    <!-- Waffle Pockets -->
+    <g fill="#A86B30" opacity="0.5">
+      <rect x="145" y="98" width="22" height="18" rx="3"/>
+      <rect x="175" y="98" width="22" height="18" rx="3"/>
+      <rect x="205" y="98" width="22" height="18" rx="3"/>
+      <rect x="235" y="98" width="22" height="18" rx="3"/>
+
+      <rect x="155" y="124" width="22" height="18" rx="3"/>
+      <rect x="185" y="124" width="22" height="18" rx="3"/>
+      <rect x="215" y="124" width="22" height="18" rx="3"/>
+
+      <rect x="170" y="150" width="22" height="18" rx="3"/>
+      <rect x="200" y="150" width="22" height="18" rx="3"/>
+
+      <rect x="188" y="176" width="22" height="18" rx="3"/>
+    </g>
+
+    <!-- Warm Melted Butter Cube -->
+    <g transform="translate(182, 106) rotate(12)">
+      <polygon points="0,10 18,0 36,10 18,20" fill="#FFE58F"/>
+      <polygon points="0,10 18,20 18,34 0,24" fill="#F0C655"/>
+      <polygon points="36,10 18,20 18,34 36,24" fill="#DFA935"/>
+    </g>
+
+    <!-- Luscious Melted Chocolate / Honey Drizzle -->
+    <path d="M130,88 Q160,110 175,95 T220,115 T255,100 T270,135" fill="none" stroke="url(#chocoDrip)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M148,130 Q170,165 200,150 T238,175 T250,205" fill="none" stroke="url(#chocoDrip)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M185,185 Q195,215 202,238" fill="none" stroke="url(#chocoDrip)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Chocolate Drips falling -->
+    <circle cx="218" cy="190" r="3.5" fill="#3D1E0C"/>
+    <circle cx="160" cy="148" r="3" fill="#3D1E0C"/>
+  </g>
+
+  <!-- Friendly Watermark Badge -->
+  <g transform="translate(200, 274)" text-anchor="middle">
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="#2C1810" opacity="0.85"/>
+    <text x="0" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#FAF5EE" letter-spacing="1">FRESHLY BAKED WAFFLE</text>
+  </g>
+</svg>

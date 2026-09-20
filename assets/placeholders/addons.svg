@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="addonBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="100%" stop-color="#F5EBDE"/>
+    </linearGradient>
+    <radialGradient id="iceScoop" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#FFF5E5"/>
+      <stop offset="100%" stop-color="#EADBCE"/>
+    </radialGradient>
+    <radialGradient id="ferreroGold" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFE885"/>
+      <stop offset="50%" stop-color="#D49E35"/>
+      <stop offset="100%" stop-color="#8C5C15"/>
+    </radialGradient>
+    <filter id="addonShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#47230E" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="400" height="300" fill="url(#addonBg)"/>
+  
+  <g opacity="0.08" stroke="#8C5123" stroke-width="1.5">
+    <path d="M0,50 H400 M0,100 H400 M0,150 H400 M0,200 H400 M0,250 H400"/>
+    <path d="M50,0 V300 M100,0 V300 M150,0 V300 M200,0 V300 M250,0 V300 M300,0 V300 M350,0 V300"/>
+  </g>
+
+  <ellipse cx="200" cy="235" rx="130" ry="20" fill="#47230E" opacity="0.16" filter="blur(6px)"/>
+
+  <!-- Composition of Add-ons -->
+  <g filter="url(#addonShadow)">
+    <!-- Ice Cream Scoop in a mini bowl -->
+    <ellipse cx="140" cy="180" rx="35" ry="12" fill="#D6C5B2"/>
+    <circle cx="140" cy="150" r="32" fill="url(#iceScoop)" stroke="#DFD1BE" stroke-width="1.5"/>
+    <path d="M120,135 Q135,145 150,130" stroke="#8C5123" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- KitKat Bars stacked -->
+    <g transform="translate(195, 125) rotate(-15)">
+      <rect x="0" y="0" width="16" height="55" rx="3" fill="#D62B2B" stroke="#9E1B1B" stroke-width="1.5"/>
+      <rect x="18" y="0" width="16" height="55" rx="3" fill="#D62B2B" stroke="#9E1B1B" stroke-width="1.5"/>
+      <line x1="8" y1="5" x2="8" y2="50" stroke="#7E1515" stroke-width="1.5"/>
+      <line x1="26" y1="5" x2="26" y2="50" stroke="#7E1515" stroke-width="1.5"/>
+    </g>
+
+    <!-- Golden Ferrero Rocher -->
+    <g transform="translate(260, 165)">
+      <circle cx="0" cy="0" r="22" fill="url(#ferreroGold)" stroke="#68420A" stroke-width="1.5"/>
+      <!-- Crushed hazelnut bumps -->
+      <circle cx="-8" cy="-8" r="3.5" fill="#583406"/>
+      <circle cx="6" cy="-10" r="3" fill="#583406"/>
+      <circle cx="-10" cy="6" r="3.5" fill="#583406"/>
+      <circle cx="5" cy="7" r="4" fill="#583406"/>
+      <circle cx="12" cy="-2" r="3" fill="#583406"/>
+    </g>
+
+    <!-- Gems / Choco chips scattered -->
+    <circle cx="105" cy="195" r="7" fill="#E82C2C"/>
+    <circle cx="120" cy="208" r="6" fill="#2DA8E8"/>
+    <circle cx="180" cy="205" r="7" fill="#36B347"/>
+    <circle cx="215" cy="200" r="6" fill="#F0B81D"/>
+
+    <!-- Chocolate chips (triangular teardrops) -->
+    <path d="M190,185 Q195,175 200,185 Q195,190 190,185 Z" fill="#241006"/>
+    <path d="M235,178 Q240,168 245,178 Q240,183 235,178 Z" fill="#241006"/>
+    <path d="M150,195 Q155,186 160,195 Q155,200 150,195 Z" fill="#241006"/>
+  </g>
+
+  <!-- Tagline Badge -->
+  <g transform="translate(200, 274)" text-anchor="middle">
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="#2C1810" opacity="0.85"/>
+    <text x="0" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#FAF5EE" letter-spacing="1">PREMIUM TOPPINGS</text>
+  </g>
+</svg>

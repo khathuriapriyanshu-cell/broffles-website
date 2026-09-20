@@ -1,0 +1,250 @@
+/* ==========================================================================
+   BROFFLES — Responsive Breakpoints & Mobile Enhancements
+   Tested from 320px to large desktop
+   ========================================================================== */
+
+/* Tablet & Smaller Desktop (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-perks {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .signature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .studio-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .studio-stage-wrapper {
+    position: relative;
+    top: 0;
+    max-width: 540px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .feature-grid-split, .feature-grid-split.reverse {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+
+/* Mobile & Small Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 70px;
+  }
+
+  body {
+    padding-bottom: 70px; /* Space for mobile sticky CTA bar */
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: #190B05;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 30px 40px 30px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(217, 130, 43, 0.3);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition-normal);
+  }
+
+  .nav-links.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-actions .btn-zomato {
+    display: none; /* Handled by mobile sticky bar */
+  }
+
+  .mobile-sticky-bar {
+    display: block;
+  }
+
+  .signature-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-categories-nav {
+    justify-content: flex-start;
+    padding: 8px 4px;
+  }
+
+  .hero-floating-badge {
+    bottom: -15px;
+    left: 5px;
+    padding: 10px 14px;
+  }
+
+  .floating-badge-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .floating-badge-title {
+    font-size: 0.88rem;
+  }
+
+  .hero-top-badge {
+    top: -10px;
+    right: 10px;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .menu-customization-notice {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .studio-builder-card {
+    padding: 24px 18px;
+  }
+
+  .customizer-options-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Screens (320px - 430px) */
+@media (max-width: 430px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .final-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .final-cta-buttons .btn {
+    width: 100%;
+  }
+
+  .location-card {
+    padding: 24px 18px;
+  }
+
+  .instagram-banner-card {
+    padding: 36px 20px;
+  }
+
+  .category-tab-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  .studio-stage-wrapper {
+    padding: 20px 14px;
+  }
+}

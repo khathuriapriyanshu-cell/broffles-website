@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="chocoBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBF4EB"/>
+      <stop offset="100%" stop-color="#EDE0D1"/>
+    </linearGradient>
+    <radialGradient id="darkWaffle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#552F19"/>
+      <stop offset="100%" stop-color="#341A0C"/>
+    </radialGradient>
+    <linearGradient id="richFudge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#241006"/>
+      <stop offset="100%" stop-color="#140802"/>
+    </linearGradient>
+    <linearGradient id="whiteCream" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F5EFE6"/>
+    </linearGradient>
+    <filter id="shadowDark" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#220D05" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="400" height="300" fill="url(#chocoBg)"/>
+  
+  <g opacity="0.08" stroke="#3A1C0B" stroke-width="1.5">
+    <path d="M0,50 H400 M0,100 H400 M0,150 H400 M0,200 H400 M0,250 H400"/>
+    <path d="M50,0 V300 M100,0 V300 M150,0 V300 M200,0 V300 M250,0 V300 M300,0 V300 M350,0 V300"/>
+  </g>
+
+  <ellipse cx="200" cy="225" rx="140" ry="24" fill="#3D1807" opacity="0.18" filter="blur(8px)"/>
+
+  <!-- Dark Chocolate Waffle Base -->
+  <g filter="url(#shadowDark)">
+    <path d="M120,80 L280,80 Q300,160 200,240 Q100,160 120,80 Z" fill="url(#darkWaffle)" stroke="#271105" stroke-width="3.5" stroke-linejoin="round"/>
+    
+    <!-- Pockets -->
+    <g fill="#251207" opacity="0.75">
+      <rect x="145" y="98" width="22" height="18" rx="3"/>
+      <rect x="175" y="98" width="22" height="18" rx="3"/>
+      <rect x="205" y="98" width="22" height="18" rx="3"/>
+      <rect x="235" y="98" width="22" height="18" rx="3"/>
+
+      <rect x="155" y="124" width="22" height="18" rx="3"/>
+      <rect x="185" y="124" width="22" height="18" rx="3"/>
+      <rect x="215" y="124" width="22" height="18" rx="3"/>
+
+      <rect x="170" y="150" width="22" height="18" rx="3"/>
+      <rect x="200" y="150" width="22" height="18" rx="3"/>
+
+      <rect x="188" y="176" width="22" height="18" rx="3"/>
+    </g>
+
+    <!-- Thick Melted Cocoa Fudge Dripping -->
+    <path d="M125,86 C155,95 160,118 180,105 C200,92 215,122 235,108 C255,94 265,115 275,130" fill="none" stroke="url(#richFudge)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M140,125 C165,145 185,135 210,165 C230,150 245,180 258,195" fill="none" stroke="url(#richFudge)" stroke-width="7" stroke-linecap="round"/>
+    
+    <!-- White Chocolate Drizzle Accents -->
+    <path d="M135,95 Q175,130 220,110 T265,140" fill="none" stroke="url(#whiteCream)" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <path d="M160,140 Q195,175 230,160 T250,195" fill="none" stroke="url(#whiteCream)" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+
+    <!-- Chocolate Pearls / Crisps -->
+    <circle cx="165" cy="115" r="4.5" fill="#140802"/>
+    <circle cx="215" cy="135" r="4" fill="#140802"/>
+    <circle cx="190" cy="165" r="5" fill="#FFFFFF"/>
+    <circle cx="235" cy="120" r="3.5" fill="#FFFFFF"/>
+    <circle cx="180" cy="205" r="4" fill="#140802"/>
+  </g>
+
+  <!-- Tagline Badge -->
+  <g transform="translate(200, 274)" text-anchor="middle">
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="#2C1810" opacity="0.85"/>
+    <text x="0" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#FAF5EE" letter-spacing="1">DEATH BY CHOCOLATE</text>
+  </g>
+</svg>

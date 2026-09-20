@@ -1,0 +1,402 @@
+/* ==========================================================================
+   BROFFLES — THE TASTE OF GOOD FRIENDSHIP
+   Main CSS & Deep Chocolate Edible Design System Tokens
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+:root {
+  /* Rich Molten Chocolate & Warm Café Palette */
+  --cocoa-950: #120703; /* Deepest molten dark cocoa */
+  --cocoa-900: #1C0C06; /* Midnight dark chocolate */
+  --cocoa-850: #241108; /* Rich chocolate card surface */
+  --cocoa-800: #2C1810; /* Primary brand dark */
+  --cocoa-700: #3C2216;
+  --cocoa-600: #553221;
+  --cocoa-500: #73452E;
+  
+  --caramel-600: #C26F1E;
+  --caramel-500: #D9822B; /* Glowing warm caramel */
+  --caramel-400: #EAA049;
+  --caramel-300: #F6C17C;
+  --caramel-100: #FDF3E5;
+
+  --honey-500: #ECA038;
+  --honey-400: #F4B85E;
+  --honey-100: #FEF7EC;
+
+  --cream-50: #FFFDF9;  /* Soft cream */
+  --cream-100: #FAF5EE; /* Card surface light */
+  --cream-200: #F4ECE1; /* Subtle section tint */
+  --cream-300: #E8DDCF; /* Borders & subtle lines */
+
+  --berry-600: #C93952;
+  --berry-500: #E8556D; /* Berry / Strawberry accent */
+  --berry-100: #FEECEF;
+
+  --mint-600: #4B8554;
+  --mint-100: #EDF7EE;
+
+  /* Typography */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-accent: 'Playfair Display', serif;
+
+  /* Rich Chocolate Shadows & Glows */
+  --shadow-sm: 0 4px 12px rgba(22, 10, 5, 0.1);
+  --shadow-md: 0 10px 30px rgba(22, 10, 5, 0.15);
+  --shadow-lg: 0 18px 45px rgba(22, 10, 5, 0.25);
+  --shadow-xl: 0 28px 70px rgba(22, 10, 5, 0.4);
+  --shadow-caramel: 0 12px 32px rgba(217, 130, 43, 0.4);
+  --shadow-glow: 0 0 35px rgba(234, 160, 73, 0.35);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Container */
+  --max-width: 1240px;
+  --nav-height: 80px;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 20px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream-50);
+  color: var(--cocoa-800);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Top Announcement Ticker Bar */
+.announcement-ticker {
+  background: linear-gradient(90deg, #1C0C06 0%, #3D1C0E 50%, #1C0C06 100%);
+  color: var(--caramel-300);
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid rgba(217, 130, 43, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  margin-top: var(--nav-height);
+  z-index: 10;
+}
+
+.announcement-ticker span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--cocoa-900);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--cocoa-600);
+  font-size: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: var(--font-body);
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 3px solid var(--caramel-500);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section Header Shared */
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px auto;
+  position: relative;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  background-color: var(--caramel-100);
+  color: var(--caramel-600);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+  border: 1px solid rgba(217, 130, 43, 0.3);
+}
+
+.section-tag.dark {
+  background-color: rgba(217, 130, 43, 0.15);
+  color: var(--caramel-400);
+  border-color: rgba(217, 130, 43, 0.4);
+}
+
+.section-tag.berry {
+  background-color: var(--berry-100);
+  color: var(--berry-600);
+  border-color: rgba(232, 85, 109, 0.2);
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  font-weight: 900;
+  color: var(--cocoa-900);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.12rem;
+  color: var(--cocoa-500);
+  line-height: 1.65;
+}
+
+/* Buttons with Shimmer & Pop */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--caramel-500) 0%, #A85912 100%);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-caramel);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(217, 130, 43, 0.5);
+}
+
+.btn-dark {
+  background-color: var(--cocoa-900);
+  color: var(--cream-50);
+  box-shadow: 0 10px 28px rgba(22, 10, 5, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-dark:hover {
+  background-color: var(--cocoa-800);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 36px rgba(22, 10, 5, 0.5);
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: var(--cocoa-900);
+  border: 1.5px solid var(--cream-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background-color: var(--cream-100);
+  border-color: var(--caramel-400);
+  color: var(--caramel-600);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-zomato {
+  background: linear-gradient(135deg, #E23744 0%, #BA1D29 100%);
+  color: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(226, 55, 68, 0.35);
+}
+
+.btn-zomato:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 36px rgba(226, 55, 68, 0.45);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #1B9A4A 100%);
+  color: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 36px rgba(37, 211, 102, 0.45);
+}
+
+.btn-outline-white {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline-white:hover {
+  background: #FFFFFF;
+  color: var(--cocoa-950);
+  border-color: #FFFFFF;
+  transform: translateY(-3px);
+}
+
+/* Badge Tags */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-chocolate {
+  background: #2C1810;
+  color: #FAF5EE;
+}
+
+.badge-nutella {
+  background: #732E14;
+  color: #FFFDF9;
+}
+
+.badge-biscoff {
+  background: #D97724;
+  color: #FFFFFF;
+}
+
+.badge-red-velvet {
+  background: #B31E35;
+  color: #FFFFFF;
+}
+
+.badge-classic {
+  background: #F4ECE1;
+  color: #73452E;
+  border: 1px solid #D6C3AF;
+}
+
+.badge-bubble {
+  background: #6C429C;
+  color: #FFFFFF;
+}
+
+/* Chocolate Drip Divider Utility */
+.chocolate-drip-divider {
+  width: 100%;
+  height: 52px;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.chocolate-drip-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.drip-to-dark path {
+  fill: var(--cocoa-950);
+}
+
+.drip-to-cream path {
+  fill: var(--cream-50);
+}
+
+.drip-to-warm path {
+  fill: var(--cream-100);
+}
+
+/* Global Section Spacing */
+.section {
+  padding: 90px 0;
+  position: relative;
+}
+
+.section-cream {
+  background-color: var(--cream-100);
+}
+
+/* Decadent Dark Chocolate Sections */
+.section-dark {
+  background-color: var(--cocoa-950);
+  color: var(--cream-100);
+  background-image: 
+    radial-gradient(circle at 15% 30%, rgba(217, 130, 43, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(232, 85, 109, 0.06) 0%, transparent 45%);
+}
+
+.section-dark .section-title {
+  color: #FFFFFF;
+}
+
+.section-dark .section-subtitle {
+  color: var(--cream-300);
+}
+
+.section-dark h3, .section-dark h4 {
+  color: #FFFFFF;
+}

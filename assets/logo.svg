@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="100%" height="100%" fill="none">
+  <!-- Circular Badge -->
+  <g transform="translate(10, 5)">
+    <!-- Outer Circle -->
+    <circle cx="40" cy="40" r="38" fill="#2C1810" />
+    <circle cx="40" cy="40" r="35" stroke="#FAF5EE" stroke-width="2" />
+    
+    <!-- Left Half: Waffle Grid -->
+    <clipPath id="leftCircleClip">
+      <rect x="0" y="0" width="40" height="80" />
+    </clipPath>
+    <g clip-path="url(#leftCircleClip)">
+      <circle cx="40" cy="40" r="32" fill="#D9822B" opacity="0.9" />
+      <!-- Grid lines -->
+      <path d="M12 28 H38 M10 40 H38 M14 52 H38 M18 64 H38" stroke="#2C1810" stroke-width="2" stroke-linecap="round" />
+      <path d="M18 15 V65 M26 10 V70 M34 8 V72" stroke="#2C1810" stroke-width="2" stroke-linecap="round" />
+    </g>
+
+    <!-- Center Divider Line -->
+    <line x1="40" y1="8" x2="40" y2="72" stroke="#FAF5EE" stroke-width="2.5" />
+
+    <!-- Right Half: Shake / Beverage Cup with Straw -->
+    <clipPath id="rightCircleClip">
+      <rect x="40" y="0" width="40" height="80" />
+    </clipPath>
+    <g clip-path="url(#rightCircleClip)">
+      <circle cx="40" cy="40" r="32" fill="#2C1810" />
+      <!-- Slanted Straw -->
+      <path d="M52 14 L62 38" stroke="#D9822B" stroke-width="3" stroke-linecap="round" />
+      <!-- Cup Body -->
+      <path d="M46 32 L49 66 Q50 68 56 68 Q62 68 63 66 L66 32 Z" fill="#FAF5EE" />
+      <path d="M44 32 H68" stroke="#D9822B" stroke-width="3" stroke-linecap="round" />
+      <!-- Cup Content Wave -->
+      <path d="M48 42 Q56 46 64 42" stroke="#D9822B" stroke-width="2" fill="none" />
+      <circle cx="56" cy="52" r="2" fill="#D9822B" />
+      <circle cx="53" cy="58" r="1.5" fill="#D9822B" />
+    </g>
+
+    <!-- Small WAFFLES Arc / Badge at Bottom -->
+    <rect x="18" y="66" width="44" height="12" rx="4" fill="#D9822B" />
+    <text x="40" y="75" font-family="'Nunito', 'Fredoka', 'Montserrat', sans-serif" font-weight="900" font-size="7" fill="#2C1810" text-anchor="middle" letter-spacing="1.5">WAFFLES</text>
+  </g>
+
+  <!-- Wordmark "BROFFLES" -->
+  <g transform="translate(105, 12)">
+    <text x="0" y="44" font-family="'Outfit', 'Plus Jakarta Sans', 'Montserrat', sans-serif" font-weight="900" font-size="44" fill="#2C1810" letter-spacing="2">BROFFLES</text>
+    
+    <!-- Tagline: THE TASTE OF GOOD FRIENDSHIP -->
+    <g transform="translate(2, 60)">
+      <line x1="0" y1="-4" x2="30" y2="-4" stroke="#D9822B" stroke-width="1.5" stroke-linecap="round" />
+      <text x="36" y="0" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#6B3E26" letter-spacing="2.8">THE TASTE OF GOOD FRIENDSHIP</text>
+      <line x1="272" y1="-4" x2="302" y2="-4" stroke="#D9822B" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>

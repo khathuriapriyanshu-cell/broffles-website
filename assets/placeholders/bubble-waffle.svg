@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bubbleBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFDF8"/>
+      <stop offset="100%" stop-color="#F5EBDE"/>
+    </linearGradient>
+    <radialGradient id="bubbleEgg" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FDE5BA"/>
+      <stop offset="70%" stop-color="#DCA462"/>
+      <stop offset="100%" stop-color="#B77B34"/>
+    </radialGradient>
+    <linearGradient id="paperCup" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#804D27"/>
+      <stop offset="50%" stop-color="#A56738"/>
+      <stop offset="100%" stop-color="#673919"/>
+    </linearGradient>
+    <filter id="bubbleShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#47230E" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="400" height="300" fill="url(#bubbleBg)"/>
+  
+  <g opacity="0.08" stroke="#8C5123" stroke-width="1.5">
+    <path d="M0,50 H400 M0,100 H400 M0,150 H400 M0,200 H400 M0,250 H400"/>
+    <path d="M50,0 V300 M100,0 V300 M150,0 V300 M200,0 V300 M250,0 V300 M300,0 V300 M350,0 V300"/>
+  </g>
+
+  <ellipse cx="200" cy="245" rx="100" ry="18" fill="#47230E" opacity="0.18" filter="blur(6px)"/>
+
+  <!-- Bubble Waffle in Cup (matching menu photo) -->
+  <g filter="url(#bubbleShadow)">
+    <!-- Back bubbles of the wrapped waffle cone -->
+    <circle cx="160" cy="85" r="14" fill="url(#bubbleEgg)"/>
+    <circle cx="185" cy="72" r="15" fill="url(#bubbleEgg)"/>
+    <circle cx="215" cy="72" r="15" fill="url(#bubbleEgg)"/>
+    <circle cx="240" cy="85" r="14" fill="url(#bubbleEgg)"/>
+
+    <!-- Ice Cream Scoops in the center -->
+    <!-- Vanilla scoop -->
+    <circle cx="180" cy="98" r="22" fill="#FFFCE8" stroke="#E2D7B4" stroke-width="1.5"/>
+    <!-- Chocolate scoop -->
+    <circle cx="220" cy="102" r="22" fill="#4B2713" stroke="#361A0A" stroke-width="1.5"/>
+
+    <!-- Pocky / KitKat stick -->
+    <polygon points="150,50 156,48 185,115 179,117" fill="#C43424"/>
+    <!-- Wafer Roll -->
+    <polygon points="245,45 252,47 225,118 218,116" fill="#DDB27C" stroke="#A87841" stroke-width="1"/>
+
+    <!-- Foreground Bubble Waffle Shell wrap -->
+    <g>
+      <!-- Bubble rows -->
+      <circle cx="140" cy="118" r="15" fill="url(#bubbleEgg)"/>
+      <circle cx="165" cy="125" r="15" fill="url(#bubbleEgg)"/>
+      <circle cx="190" cy="130" r="15" fill="url(#bubbleEgg)"/>
+      <circle cx="215" cy="130" r="15" fill="url(#bubbleEgg)"/>
+      <circle cx="240" cy="125" r="15" fill="url(#bubbleEgg)"/>
+      <circle cx="260" cy="118" r="15" fill="url(#bubbleEgg)"/>
+
+      <circle cx="148" cy="148" r="14" fill="url(#bubbleEgg)"/>
+      <circle cx="174" cy="154" r="14" fill="url(#bubbleEgg)"/>
+      <circle cx="200" cy="156" r="14" fill="url(#bubbleEgg)"/>
+      <circle cx="226" cy="154" r="14" fill="url(#bubbleEgg)"/>
+      <circle cx="252" cy="148" r="14" fill="url(#bubbleEgg)"/>
+    </g>
+
+    <!-- Hot Chocolate Sauce Drizzle -->
+    <path d="M165,88 Q185,115 200,98 T235,110 T255,130" fill="none" stroke="#2B1408" stroke-width="6" stroke-linecap="round"/>
+    <path d="M175,120 Q195,145 210,132 T240,150" fill="none" stroke="#2B1408" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Gems / M&Ms / Sprinkles -->
+    <circle cx="172" cy="100" r="4.5" fill="#E82C2C"/>
+    <circle cx="195" cy="92" r="4.5" fill="#2DA8E8"/>
+    <circle cx="212" cy="112" r="4" fill="#F0B81D"/>
+    <circle cx="192" cy="118" r="4" fill="#36B347"/>
+    <circle cx="230" cy="100" r="4" fill="#A836B3"/>
+    
+    <!-- Paper Cup Carrier -->
+    <polygon points="160,165 240,165 228,245 172,245" fill="url(#paperCup)" stroke="#4A2610" stroke-width="2"/>
+    <!-- Cup Rim -->
+    <ellipse cx="200" cy="165" rx="40" ry="7" fill="#673919"/>
+    <!-- Broffles emblem on cup -->
+    <circle cx="200" cy="205" r="15" fill="#FAF5EE"/>
+    <text x="200" y="209" font-family="'Outfit', sans-serif" font-weight="900" font-size="8" fill="#2C1810" text-anchor="middle">BROFFLES</text>
+  </g>
+
+  <!-- Tagline Badge -->
+  <g transform="translate(200, 274)" text-anchor="middle">
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="#2C1810" opacity="0.85"/>
+    <text x="0" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#FAF5EE" letter-spacing="1">BUBBLE WAFFLE SPECIAL</text>
+  </g>
+</svg>

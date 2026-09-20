@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pancakeBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="100%" stop-color="#F6EDE0"/>
+    </linearGradient>
+    <radialGradient id="pancakePuff" cx="45%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFE0AB"/>
+      <stop offset="60%" stop-color="#DE9D4B"/>
+      <stop offset="100%" stop-color="#B06E22"/>
+    </radialGradient>
+    <linearGradient id="plateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EDE2D3"/>
+    </linearGradient>
+    <filter id="pancakeShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#47230E" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="400" height="300" fill="url(#pancakeBg)"/>
+  
+  <g opacity="0.08" stroke="#8C5123" stroke-width="1.5">
+    <path d="M0,50 H400 M0,100 H400 M0,150 H400 M0,200 H400 M0,250 H400"/>
+    <path d="M50,0 V300 M100,0 V300 M150,0 V300 M200,0 V300 M250,0 V300 M300,0 V300 M350,0 V300"/>
+  </g>
+
+  <!-- Ceramic Serving Plate (Perspective ellipse) -->
+  <g filter="url(#pancakeShadow)">
+    <ellipse cx="200" cy="180" rx="160" ry="60" fill="url(#plateGrad)" stroke="#E0CDBB" stroke-width="2"/>
+    <ellipse cx="200" cy="180" rx="135" ry="48" fill="#F7EFE4" stroke="#DEC8B2" stroke-width="1.5"/>
+
+    <!-- Stack / Row of Cute Mini Pancakes (Poffertjes) -->
+    <!-- Back Row -->
+    <ellipse cx="140" cy="160" rx="22" ry="14" fill="url(#pancakePuff)"/>
+    <ellipse cx="178" cy="155" rx="22" ry="14" fill="url(#pancakePuff)"/>
+    <ellipse cx="222" cy="155" rx="22" ry="14" fill="url(#pancakePuff)"/>
+    <ellipse cx="260" cy="160" rx="22" ry="14" fill="url(#pancakePuff)"/>
+
+    <!-- Mid Row -->
+    <ellipse cx="120" cy="178" rx="24" ry="15" fill="url(#pancakePuff)"/>
+    <ellipse cx="160" cy="174" rx="24" ry="15" fill="url(#pancakePuff)"/>
+    <ellipse cx="200" cy="170" rx="25" ry="16" fill="url(#pancakePuff)"/>
+    <ellipse cx="240" cy="174" rx="24" ry="15" fill="url(#pancakePuff)"/>
+    <ellipse cx="280" cy="178" rx="24" ry="15" fill="url(#pancakePuff)"/>
+
+    <!-- Front Row -->
+    <ellipse cx="145" cy="195" rx="24" ry="15" fill="url(#pancakePuff)"/>
+    <ellipse cx="185" cy="194" rx="25" ry="16" fill="url(#pancakePuff)"/>
+    <ellipse cx="225" cy="194" rx="25" ry="16" fill="url(#pancakePuff)"/>
+    <ellipse cx="265" cy="195" rx="24" ry="15" fill="url(#pancakePuff)"/>
+
+    <!-- Butter Pat Melting in the center -->
+    <rect x="190" y="160" width="18" height="12" rx="3" fill="#FFE27A" stroke="#E5B942" stroke-width="1"/>
+    
+    <!-- Luxurious Chocolate sauce zigzag over all mini pancakes -->
+    <path d="M105,175 Q135,145 160,185 T215,160 T255,190 T295,170" fill="none" stroke="#33180B" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M125,188 Q165,165 190,200 T240,175 T280,205" fill="none" stroke="#33180B" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- White Cream / Condensed milk swirls -->
+    <path d="M130,170 Q170,195 210,175 T270,185" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+
+    <!-- Choco chips & sprinkles on top -->
+    <circle cx="155" cy="180" r="3" fill="#1C0C04"/>
+    <circle cx="190" cy="188" r="3" fill="#1C0C04"/>
+    <circle cx="230" cy="180" r="3.5" fill="#1C0C04"/>
+    <circle cx="255" cy="190" r="2.5" fill="#1C0C04"/>
+    <circle cx="215" cy="198" r="3" fill="#1C0C04"/>
+  </g>
+
+  <!-- Tagline Badge -->
+  <g transform="translate(200, 274)" text-anchor="middle">
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="#2C1810" opacity="0.85"/>
+    <text x="0" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#FAF5EE" letter-spacing="1">MINI PAN CAKES</text>
+  </g>
+</svg>
