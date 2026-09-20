@@ -124,9 +124,9 @@ const ImageResolver = {
    * Primary path to attempt loading first
    */
   getPrimaryPath(item) {
-    if (item.image) return item.image;
+    if (item.image) return encodeURI(item.image);
     const candidates = this.getCandidateFilenames(item);
-    return `${this.photosDir}${candidates[0]}`;
+    return `${this.photosDir}${encodeURI(candidates[0])}`;
   },
 
   /**
@@ -173,7 +173,7 @@ const ImageResolver = {
 
     if (currentAttempt < candidates.length) {
       imgEl.setAttribute('data-attempt', (currentAttempt + 1).toString());
-      imgEl.src = `${this.photosDir}${candidates[currentAttempt]}`;
+      imgEl.src = `${this.photosDir}${encodeURI(candidates[currentAttempt])}`;
     } else {
       this.applyFallback(imgEl, item);
     }
